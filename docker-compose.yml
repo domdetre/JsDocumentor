@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+
+  esdocker:
+    build:
+      context: docker/esdocker
+    volumes:
+      - ./.sources:/sources
+      - ./.docs-esdoc:/docs
+      - ./scripts:/scripts:ro
