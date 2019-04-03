@@ -1,0 +1,9 @@
+FROM node:11.13
+
+RUN npm install -g npm@6.0.1
+RUN cd /root && npm install esdoc esdoc-standard-plugin
+RUN cd /root && npm install esdoc2 esdoc2-standard-plugin
+
+VOLUME /sources /docs /scripts
+
+CMD bash /scripts/generate-esdoc2.sh

@@ -1,5 +1,8 @@
-generate:
-	docker-compose run --rm esdocker
+generate-esdoc:
+	docker-compose run --rm esdoc
+
+generate-esdoc2:
+	docker-compose run --rm esdoc2
 
 init:
 	scripts/pull-repos.sh

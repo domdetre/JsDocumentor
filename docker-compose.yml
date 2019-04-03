@@ -2,10 +2,18 @@ version: '3'
 
 services:
 
-  esdocker:
+  esdoc:
     build:
-      context: docker/esdocker
-    volumes:
+      context: docker/esdoc
+    volumes: &volumes
       - ./.sources:/sources
       - ./.docs-esdoc:/docs
+      - ./scripts:/scripts:ro
+
+  esdoc2:
+    build:
+      context: docker/esdoc2
+    volumes:
+      - ./.sources:/sources
+      - ./.docs-esdoc2:/docs
       - ./scripts:/scripts:ro
