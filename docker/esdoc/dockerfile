@@ -1,7 +1,6 @@
 FROM node:11.13
 
-RUN npm install -g npm@6.0.1
-RUN cd /root && npm install esdoc esdoc-standard-plugin
+RUN cd /root && npm install esdoc esdoc-standard-plugin esdoc-ecmascript-proposal-plugin
 
 VOLUME /sources /docs /scripts
 

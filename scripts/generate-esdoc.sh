@@ -11,7 +11,10 @@ do
     echo "{
         \"source\": \"./src\",
         \"destination\": \"/docs/$dir\",
-        \"plugins\": [{\"name\": \"esdoc-standard-plugin\"}]
+        \"plugins\": [
+            {\"name\": \"esdoc-standard-plugin\"},
+            {\"name\": \"esdoc-ecmascript-proposal-plugin\", \"option\": {\"all\": true}}
+        ]
     }" > .esdoc.json
 
     /root/node_modules/.bin/esdoc
