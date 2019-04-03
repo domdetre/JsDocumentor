@@ -17,3 +17,35 @@ services:
       - ./.sources:/sources
       - ./.docs-esdoc2:/docs
       - ./scripts:/scripts:ro
+
+  yuidoc:
+    build:
+      context: docker/yuidoc
+    volumes:
+      - ./.sources:/sources
+      - ./.docs-yuidoc:/docs
+      - ./scripts:/scripts:ro
+
+  jsdoc:
+    build:
+      context: docker/jsdoc
+    volumes:
+      - ./.sources:/sources
+      - ./.docs-jsdoc:/docs
+      - ./scripts:/scripts:ro
+
+  docco:
+    build:
+      context: docker/docco
+    volumes:
+      - ./.sources:/sources
+      - ./.docs-docco:/docs
+      - ./scripts:/scripts:ro
+
+  documentationjs:
+    build:
+      context: docker/documentationjs
+    volumes:
+      - ./.sources:/sources
+      - ./.docs-documentationjs:/docs
+      - ./scripts:/scripts:ro

@@ -1,0 +1,7 @@
+FROM node:11.13
+
+RUN cd /root && npm install documentation
+
+VOLUME /sources /docs /scripts
+
+CMD bash /scripts/generate-documentationjs.sh

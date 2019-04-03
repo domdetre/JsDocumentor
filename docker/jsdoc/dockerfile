@@ -1,0 +1,7 @@
+FROM node:11.13
+
+RUN cd /root && npm install jsdoc
+
+VOLUME /sources /docs /scripts
+
+CMD bash /scripts/generate-jsdoc.sh
